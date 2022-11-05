@@ -19,7 +19,7 @@ nnoremap <leader>lc :call <SID>FixSpellingError()<CR>
 nnoremap <leader>lC :call <SID>MultiChoiceFixSpellingError()<CR>
 nnoremap <leader>lm :call <SID>ModifyWord()<CR>
 
-function! SetSpellang(lang)
+function! s:SetSpellang(lang)
     if &spelllang != a:lang || &spell == 0
         execute 'set spell spelllang=' . a:lang
         echo 'Set lang : ' . a:lang
